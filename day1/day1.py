@@ -23,6 +23,13 @@ for idx, elf_ in enumerate(elves):
     if elf_.total_calories > highest_calories:
         highest_calories = elf_.total_calories
         highest_id = idx
-
+print('Part 1 answer:')
 print(highest_id, highest_calories)
 
+
+### PART 2
+all_total_calories = [elf_.total_calories for elf_ in elves]
+all_total_calories.sort(reverse=True)
+print('Part 2 answer:')
+top_3 = all_total_calories[:3]
+print(top_3, sum(top_3))
